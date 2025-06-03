@@ -1,73 +1,88 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <base target="_top">
+  <meta charset="UTF-8">
   <title>MCD Memo Routing</title>
-  <!-- Bootstrap 5 CDN -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="MCD Memo Routing System - Send, Approve, and Find Memos." />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
       background: #f8f9fa;
       font-family: 'Segoe UI', sans-serif;
     }
-
-    .header-image {
-      width: 100%;
-      max-height: 150px;
-      object-fit: contain;
-      background: white;
+    header {
+      background-color: #fff;
       padding: 20px;
       border-bottom: 1px solid #dee2e6;
+      text-align: center;
     }
-
+    .header-logo {
+      max-width: 600px;
+      width: 100%;
+      height: auto;
+    }
     .title {
       font-size: 2rem;
       font-weight: 700;
-      text-align: center;
-      margin: 20px 0;
       color: #003366;
+      margin-top: 1rem;
     }
-
     .button-container {
       display: flex;
       flex-direction: column;
       gap: 1rem;
       max-width: 400px;
-      margin: 0 auto;
+      margin: 2rem auto;
+    }
+    @media (min-width: 576px) {
+      .button-container {
+        flex-direction: row;
+        justify-content: center;
+      }
     }
   </style>
 </head>
-
 <body>
-  <div class="text-center mb-4">
+
+  <header role="banner">
     <img
       src="https://images.contentstack.io/v3/assets/blt827157d7af7bc6d4/blt539b6710c5d23513/63306748763d011cd3e925bd/megaworld-logo.png"
-      alt="Header Image"
-      class="img-fluid"
-      style="max-width: 100%; width: 600px"
+      alt="Megaworld Corporation Logo"
+      class="header-logo"
     />
-  </div>
-  <div class="container text-center mt-4">
-    <div class="text-center">
-      <h1>MCD Memo Routing</h1><br><br>
-    </div>
-    <div class="button-container">
+    <div class="title">MCD Memo Routing</div>
+  </header>
 
-      <td>
-        <a href="https://script.google.com/macros/s/AKfycbwntMTGQ9X4XQzG_TKOj1BhrjHEPMdVG8H8XXXGl9TOYPxAW59LliYgm3g6R_E8QZwDfA/exec"
-          class="btn btn-success btn-custom" target="_blank" rel="noopener noreferrer">Send a Memo</a>
-      </td>
-      <td>
-        <a href="https://script.google.com/macros/s/AKfycbwG0Ns25BOhOqv0hZH79YEBlJLIL4hpuGA0xrC7liQOqaPVnmnLFOtg9LyOTfZXFdMb/exec"
-          class="btn btn-success btn-custom" target="_blank" rel="noopener noreferrer">Approve a Memo</a>
-      </td>
-      <td>
-        <a href="https://script.google.com/macros/s/AKfycbwdtLmaxc61t1jsPprCz8XBEkUTSaldhHR3qeJ45VHXTYxWF9W0Sn2QhTzriMw9ykpXkg/exec"
-          class="btn btn-success btn-custom" target="_blank" rel="noopener noreferrer">Memo Finder</a>
-      </td>
-    </div>
-  </div>
+  <main role="main" class="container text-center mt-5">
+    <section aria-label="Memo Routing Actions">
+      <div class="button-container">
+        <a
+          href="https://script.google.com/macros/s/AKfycbwntMTGQ9X4XQzG_TKOj1BhrjHEPMdVG8H8XXXGl9TOYPxAW59LliYgm3g6R_E8QZwDfA/exec"
+          class="btn btn-success"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Send a Memo Form"
+        >Send a Memo</a>
+
+        <a
+          href="https://script.google.com/macros/s/AKfycbwG0Ns25BOhOqv0hZH79YEBlJLIL4hpuGA0xrC7liQOqaPVnmnLFOtg9LyOTfZXFdMb/exec"
+          class="btn btn-success"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Approve a Memo Form"
+        >Approve a Memo</a>
+
+        <a
+          href="https://script.google.com/macros/s/AKfycbwdtLmaxc61t1jsPprCz8XBEkUTSaldhHR3qeJ45VHXTYxWF9W0Sn2QhTzriMw9ykpXkg/exec"
+          class="btn btn-success"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Memo Finder Tool"
+        >Memo Finder</a>
+      </div>
+    </section>
+  </main>
+
 </body>
-
 </html>
